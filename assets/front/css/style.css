@@ -9761,3 +9761,30 @@ select.form-control {
 .h--150 {
 	height: 150px;
 }
+
+.extra_mb_p {
+	margin-bottom: 1.5rem;
+}
+
+#vendor_form_screen{
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+}
+#vendor_form_first_screen{
+	/* float:left; */
+	overflow: hidden;
+	max-width: 100%;
+}
+#vendor_form_second_screen{
+	 position: absolute;
+	 top: 0;
+	 right: 0px;
+	 width: 0px;
+	 overflow: hidden;
+	 animation: all 1s ;
+}
+
+#vendor_form_screen  label.error {
+    color: red;
+}

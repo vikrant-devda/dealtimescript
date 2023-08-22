@@ -13,7 +13,7 @@
                                 <a class="nav-link dropdown-toggle" href="{{ route('front.index') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="nav-item dropdown mega-dropdown">
-                                <a class="nav-link dropdown-toggle" href="{{ route('front.category') }}">{{ __('Product') }}</a>
+                                <a class="nav-link dropdown-toggle" href="{{ route('front.category') }}">{{ __('Deals') }}</a>
                                 <ul class="dropdown-menu mega-dropdown-menu">
                                     <li class="mega-container">
                                         <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1">
@@ -39,17 +39,25 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown ">
-                                <a class="nav-link dropdown-toggle" href="#">{{ __('Pages') }}</a>
-                                <ul class="dropdown-menu">
-                                    @foreach(DB::table('pages')->where('language_id',$langg->id)->where('header','=',1)->get() as $data)
-                                    <li><a class="dropdown-item" href="{{ route('front.vendor',$data->slug) }}">{{ $data->title }}</a></li>
-                                    @endforeach
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown {{ request()->path()=='blog' ? 'active' : '' }}">
-                                <a class="nav-link dropdown-toggle" href="{{ route('front.blog') }}">{{ __('Blog') }}</a>
-                            </li>
+                            @if (Auth::check())
+                                @if($gs->reg_vendor == 1)
+                                    <li class="nav-item dropdown ">
+                                        @if(Auth::guard('web')->user()->is_vendor == 2)
+                                            <a href="{{ route('vendor.dashboard') }}" class="nav-link dropdown-toggle "> {{ __('Dashboard') }}</a>
+                                        @else
+                                            <a href="{{ route('user-package') }}" class="nav-link dropdown-toggle "> {{ __('Become a vendor') }}</a>
+                                        @endif
+                                    </li>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown ">
+                                    <a class="nav-link dropdown-toggle" href="{{ route('front.blog') }}">{{ __('Register/Login') }}</a>
+                                </li>
+                                <li class="nav-item dropdown ">
+                                    <a class="nav-link dropdown-toggle" href="{{ route('vendor.login') }}">{{ __('Become a vendor') }}</a>
+                                </li>
+                            @endif
+                            
                             <li class="nav-item dropdown {{ request()->path()=='faq' ? 'active' : '' }}">
                                 <a class="nav-link dropdown-toggle" href="{{ route('front.faq') }}">{{ __('FAQ') }}</a>
                             </li>
@@ -94,13 +102,13 @@
                         <div id="myInputautocomplete-list" class="autocomplete-items"></div>
                     </div>
                     <div class="sign-in my-account-dropdown position-relative">
-                        <a href="my-account.html" class="has-dropdown d-flex align-items-center text-white text-decoration-none">
-                            @if (Auth::check())
-                            <img class="img-fluid user lazy" data-src="{{ asset('assets/images/users/'.Auth::user()->photo) }}" alt="">
-                            @else
-                            <i class="flaticon-user-3 flat-mini mx-auto text-dark"></i>
-                            @endif
-                        </a>
+                        @if (Auth::check())
+                            <a href="my-account.html" class="has-dropdown d-flex align-items-center text-white text-decoration-none">
+                                <img class="img-fluid user lazy" data-src="{{ asset('assets/images/users/'.Auth::user()->photo) }}" alt="">
+                            </a>
+                        @else
+
+                        @endif
                         <ul class="my-account-popup">
                             @if (Auth::check())
 

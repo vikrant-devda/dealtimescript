@@ -33,21 +33,7 @@
                       </select>
                    </div>
                 </li>
-                @if($gs->reg_vendor == 1)
-                <div class=" align-items-center text-general sell">
-                   @if(Auth::check())
-                   @if(Auth::guard('web')->user()->is_vendor == 2)
-                   <a href="{{ route('vendor.dashboard') }}" class="sell-btn "> {{ __('Sell') }}</a>
-                   @else
-                   <a href="{{ route('user-package') }}" class="sell-btn "> {{ __('Sell') }}</a>
-                   @endif
-                </div>
-                @else
-                <div class=" align-items-center text-general">
-                   <a href="{{ route('vendor.login') }}" class="sell-btn "> {{ __('Sell') }}</a>
-                </div>
-                @endif
-                @endif
+                
              </ul>
           </div>
        </div>

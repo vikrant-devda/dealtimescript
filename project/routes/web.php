@@ -1619,4 +1619,4 @@ Route::post('/item/report', 'Front\CatalogController@report')->name('product.rep
 
   });
   Route::post('the/genius/ocean/2441139', 'Front\FrontendController@subscription');
-  Route::get('finalize', 'Front\FrontendController@finalize');
+  // Route::get('finalize', 'Front\FrontendController@finalize');
