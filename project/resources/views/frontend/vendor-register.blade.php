@@ -40,7 +40,7 @@
                                             <div id="vendor_form_screen">
                                                 <div id="vendor_form_first_screen" class="vendor_form_tab" >
                                                     <p class="extra_mb_p">
-                                                        <input type="text" name="shop_name" class="form-control" required=""  placeholder="{{ __('Business  Name') }}" >
+                                                        <input type="text" name="shop_name" class="form-control vendor_frm_enable" required=""  placeholder="{{ __('Business  Name') }}" >
                                                     </p>
                                                     
                                                     <div class="row">
@@ -58,7 +58,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                             <p class="extra_mb_p">
-                                                                <input type="text" name="business_phone" class="form-control" required=""  placeholder="{{ __('Busines Phone Number') }}" >
+                                                                <input type="text" name="business_phone" class="form-control" required=""  placeholder="{{ __('Business Phone Number') }}" >
                                                             </p>
                                                         </div>
                                                         <div class="col-lg-6">
@@ -70,7 +70,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                             <p class="extra_mb_p">
-                                                                <input type="text" name="reg_number" class="form-control" required=""  placeholder="{{ __('Busines Registration Number') }}" >
+                                                                <input type="text" name="reg_number" class="form-control" required=""  placeholder="{{ __('Business Registration Number') }}" >
                                                             </p>
                                                         </div>
                                                         <div class="col-lg-6">
@@ -109,7 +109,7 @@
                                                         <input type="text" name="shop_address" class="form-control"  required=""  placeholder="Business Category (e.g., restaurants, hotels, salons)" >
                                                     </p>
                                                     <p>
-                                                        <input type="text" name="shop_message" class="form-control" required=""  placeholder="{{ __('Business Description') }}" >
+                                                        <input type="text" name="shop_details" class="form-control" required=""  placeholder="{{ __('Business Description') }}" >
                                                     </p>
                                                     
                                                     <p>

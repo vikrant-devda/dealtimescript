@@ -15,7 +15,6 @@
         <span class="preload-close"><i class="fas fa-times"></i></span>
         <div class="subscribePreloader__text text-center">
             <h1>{{ __('NEWSLETTER') }}</h1>
-            <p>{{ $gs->pop_description }}</p>
             <form action="{{route('front.subscribe')}}" class="subscribeform" method="POST">
                 {{csrf_field()}}
                 <div class="form-group">

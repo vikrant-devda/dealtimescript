@@ -47,7 +47,13 @@
 				processData: false,
 				success: function (data) {
 					if (data == 1) {
-						window.location = mainurl + "/user/dashboard";
+						
+						if($this.find("vendor_frm_enable").length >0){
+							window.location = mainurl + "/vendor/dashboard";
+						}else{
+							window.location = mainurl + "/user/dashboard";
+						}
+						
 					} else {
 						if (data.errors) {
 							$this.find(".alert-success").hide();

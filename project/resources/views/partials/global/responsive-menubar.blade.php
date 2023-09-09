@@ -51,7 +51,7 @@
                                 @endif
                             @else
                                 <li class="nav-item dropdown ">
-                                    <a class="nav-link dropdown-toggle" href="{{ route('front.blog') }}">{{ __('Register/Login') }}</a>
+                                    <a class="nav-link dropdown-toggle" href="{{ route('user.login') }}">{{ __('Register/Login') }}</a>
                                 </li>
                                 <li class="nav-item dropdown ">
                                     <a class="nav-link dropdown-toggle" href="{{ route('vendor.login') }}">{{ __('Become a vendor') }}</a>

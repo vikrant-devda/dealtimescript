@@ -32,7 +32,7 @@
 												<div class="row">
 													<div class="col-lg-4">
 														<div class="left-area">
-																<h4 class="heading">{{ __('Shop Name:') }} </h4>
+																<h4 class="heading">Business Name </h4>
 														</div>
 													</div>
 													<div class="col-lg-7">
@@ -47,11 +47,21 @@
 														</div>
 													</div>
 												</div>
+												<div class="row">
+													<div class="col-lg-4">
+														<div class="left-area">
+																<h4 class="heading">Business Phone Number *</h4>
+														</div>
+													</div>
+													<div class="col-lg-7">
+														<input type="text" class="input-field" name="owner_name" placeholder="Business Phone Number" required="" value="{{$data->business_phone}}">
+													</div>
+												</div>
 
 												<div class="row">
 													<div class="col-lg-4">
 														<div class="left-area">
-																<h4 class="heading">{{ __('Owner Name') }} *</h4>
+																<h4 class="heading">Website *</h4>
 														</div>
 													</div>
 													<div class="col-lg-7">
@@ -62,7 +72,7 @@
 												<div class="row">
 													<div class="col-lg-4">
 														<div class="left-area">
-																<h4 class="heading">{{ __('Shop Number') }} *</h4>
+																<h4 class="heading">Tax Identification Number (TIN) *</h4>
 														</div>
 													</div>
 													<div class="col-lg-7">
@@ -73,7 +83,7 @@
 												<div class="row">
 													<div class="col-lg-4">
 														<div class="left-area">
-																<h4 class="heading">{{ __('Shop Address') }} *</h4>
+																<h4 class="heading">Business Category*</h4>
 														</div>
 													</div>
 													<div class="col-lg-7">
@@ -84,7 +94,7 @@
 												<div class="row">
 													<div class="col-lg-4">
 														<div class="left-area">
-																<h4 class="heading">{{ __('Registration Number') }}</h4>
+																<h4 class="heading">Business Registration Number</h4>
 																<p class="sub-heading">{{ __('(Optional)') }}</p>
 														</div>
 													</div>
@@ -96,7 +106,7 @@
 												<div class="row">
 													<div class="col-lg-4">
 														<div class="left-area">
-																<h4 class="heading">{{ __('Shop Details') }} *</h4>
+																<h4 class="heading">Business Description *</h4>
 														</div>
 													</div>
 													<div class="col-lg-7">
